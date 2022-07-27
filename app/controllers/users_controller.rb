@@ -5,5 +5,14 @@ class UsersController < ApplicationController
   end
 
   def edit
+    
+  end
+
+  def index
+  end
+
+  private
+  def user_params
+    params.require(:user).permit(:name, :image, :intoroduction)
   end
 end
