@@ -5,10 +5,13 @@ class UsersController < ApplicationController
   end
 
   def edit
-    
+
   end
 
   def index
+  end
+
+  def delete
   end
 
   private
