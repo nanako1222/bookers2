@@ -1,6 +1,12 @@
+<!-- フラッシュSigned out successfully.-->
+
 <main>
-  <p id="notice"></p>
+ <% if flash[:notice] %>
+    <%= notice %>
+  <% end %>
+
   <div class="container">
+
     <div class="row">
       <div class="mx-auto col-11 col-sm-10 col-xl-6">
         <h1>
