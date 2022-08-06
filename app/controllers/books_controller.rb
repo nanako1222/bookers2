@@ -20,7 +20,8 @@ class BooksController < ApplicationController
       redirect_to book_path(@book.id), notice: 'You have creatad book successfully.'
     else
       @books = Book.all
-      render :show
+      @user = current_user
+      render :index
     end
   end
 
