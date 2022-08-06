@@ -18,7 +18,10 @@
           <a class="navbar-brand" href="/">
             <span>Bookers</span>
           </a>
-          <div class="navbar-collapse collapse show" id="navbarNavDropdown" style>
+          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collapse collapse" id="navbarNavDropdown" style>
             <ul class="navbar-nav ml-auto">
 
               <% if user_signed_in? %>
@@ -28,7 +31,7 @@
                     <i class="fa-solid fa-house-chimney"></i>
                     Home
                   </span>
-                  <% end %>
+                <% end %>
                 </li>
                 <li>
                   <%= link_to users_path, class:"nav-link text-light" do %>
@@ -71,14 +74,12 @@
                     </span>
                   <% end %>
                 </li>
-
                 <li>
                   <%= link_to new_user_registration_path, class:"nav-link text-light" do %>
                     <i class="fa-solid fa-user-plus"></i>
                     <span class="glyphicon glyphicon-edit" aria-hidden="true"> Sign up</span>
                   <% end %>
                 </li>
-
                 <li>
                   <%= link_to new_user_session_path, class:"nav-link text-light" do %>
                     <i class="fa-solid fa-right-to-bracket"></i>
