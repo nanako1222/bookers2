@@ -26,64 +26,52 @@
 
               <% if user_signed_in? %>
                 <li>
-                <%= link_to user_path(current_user), class:"nav-link text-light" do %>
-                  <span class="glyphicon glyphicon-home" aria-hidden="true">
-                    <i class="fa-solid fa-house-chimney"></i>
+                  <%= link_to user_path(current_user), class:"nav-link text-light" do %>
+                    <i class="fas fa-home"></i>
                     Home
-                  </span>
-                <% end %>
+                  <% end %>
                 </li>
                 <li>
                   <%= link_to users_path, class:"nav-link text-light" do %>
-                    <span class="glyphicon glyphicon-user" aria-hidden="true">
-                      <i class="fa-solid fa-users"></i>
-                      Users
-                    </span>
+                    <i class="fas fa-users"></i>
+                    Users
                   <% end %>
                 </li>
                 <li>
                   <%= link_to books_path, class:"nav-link text-light" do %>
-                    <span class="glyphicon glyphicon-book" aria-hidden="true">
-                      <i class="fa-solid fa-book-open"></i>
-                      Books
-                    </span>
+                    <i class="fas fa-book-open"></i>
+                    Books
                   <% end %>
                 </li>
                 <li>
                   <%= link_to destroy_user_session_path, method: :delete, class:"nav-link text-light" do %>
-                    <span class="glyphicon glyphicon-log-out" aria-hidden="true">
-                      <i class="fa-solid fa-right-from-bracket"></i>
-                      Logout
-                    </span>
+                      <i class="fas fa-sign-out-alt"></i>
+                      Log out
                   <% end %>
                 </li>
               <% else %>
                 <li>
                   <%= link_to root_path, class:"nav-link text-light" do %>
-                    <span class="glyphicon glyphicon-home" aria-hidden="true">
-                      <i class="fa-solid fa-house-chimney"></i>
+                      <i class="fas fa-home"></i>
                       Home
-                    </span>
                   <% end %>
                 </li>
                 <li>
                   <%= link_to about_path, class:"nav-link text-light" do %>
-                    <span class="glyphicon glyphicon-link" aria-hidden="true">
-                      <i class="fa-solid fa-link"></i>
+                      <i class="fas fa-link"></i>
                       About
-                    </span>
                   <% end %>
                 </li>
                 <li>
                   <%= link_to new_user_registration_path, class:"nav-link text-light" do %>
-                    <i class="fa-solid fa-user-plus"></i>
-                    <span class="glyphicon glyphicon-edit" aria-hidden="true"> Sign up</span>
+                    <i class="fas fa-user-plus"></i>
+                    Sign up
                   <% end %>
                 </li>
                 <li>
                   <%= link_to new_user_session_path, class:"nav-link text-light" do %>
-                    <i class="fa-solid fa-right-to-bracket"></i>
-                    <span class="glyphicon glyphicon-log-in" aria-hidden="true"> Log in</span>
+                    <i class="fas fa-sign-in-alt"></i>
+                    Log in
                   <% end %>>
                 </li>
               <% end %>
